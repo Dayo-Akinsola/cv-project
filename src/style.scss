@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+}
+
+hr {
+  margin-top: 0.1em;
+  min-width: 100%;
+}
+
+$cool-gray: #BCCAC938;
+$darker-gray: #9caaa9;
+$pc-white: #F9F9F9;
+
+@mixin pageSection {
+  display: flex;
+  flex-direction: column;
+  background-color: $pc-white;
+  margin: 2em auto auto auto;
+  max-width: 90%;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+body {
+  background-color: $cool-gray;
+}
+
+.forms {
+  @include pageSection;
+
+  .form {
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__input {
+    margin: 0.4em;
+    width: 90%;
+    padding: 0.2em;
+    font-size: 1em;
+  }
+
+  .form__input--profile {
+    font-size: 1.3em;
+  }
+
+  .form__input--responsibility {
+    font-size: 1.3em;
+  }
+
+  .section {
+    margin-bottom: 1.2em;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+}
+
+.template {
+  @include pageSection;
+  padding: 0;
+
+  .template__header {
+    background: $darker-gray;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+  }
+
+  .template__sections {
+    padding: 1em;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .template__name-container {
+    display: flex;
+    font-size: 1.4em;
+    justify-content: space-evenly;
+    font-weight: 900;
+  }
+
+  .template__header--title {
+    text-align: center;
+    margin-top: 1em;
+    font-weight: 500;
+  }
+
+  .template__content {
+    padding: 1em;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .template__experience-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .template__university-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .template__date-location {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 0.6em;
+    flex-direction: column;
+  }
+
+  .template__location-name {
+    margin-right: auto;
+  }
+
+  .template__dates {
+    margin-right: 1em;
+  }
+
+  .template__university-name {
+    margin-bottom: 0.2em;
+  }  
+
+  .template__degree-name {
+    margin-bottom: 0.4em;
+  }
+
+  .template__relevant-modules--heading {
+    margin-bottom: 0.2em;
+  }
+
+  .template__position-title {
+    margin-bottom: 0.2em;
+  }
+
+  .template__company-name {
+    margin-bottom: 0.4em;
+  }
+
+  .template__sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DFE0DC;
+    padding: 1em;
+  }
+
+  .template__contact-container {
+    margin-top: 2em;
+  }
+
+  .template__contact--heading {
+    margin-bottom: 0.6em;
+    text-align: center;
+  }
+
+  .template__phone-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.4em;
+
+  }
+
+  .template__email-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.4em;
+  }
+
+  .template__address-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.4em;
+  }
+}
