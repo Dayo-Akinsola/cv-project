@@ -9,10 +9,10 @@ class TemplateHeader extends Component {
     return (
       <header className="template__header">
         <div className="template__name-container">
-          <span className="template__header--text template__name--first-name">LOREM</span>
-          <span className="template__header--text template__name--last-name">IPSUM</span>
+          <span className="template__header--text template__name--first-name"></span>
+          <span className="template__header--text template__name--last-name"></span>
         </div>
-        <span className="template__header--text template__header--title">Software Engineer</span>
+        <span className="template__header--text template__header--title"></span>
       </header>
     )
   }

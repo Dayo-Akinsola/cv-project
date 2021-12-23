@@ -12,17 +12,17 @@ class ExperienceTemplate extends Component {
         <hr />
         <div className="template__content template__content--experience">
           <div className="template__date-location template__date-location--experience">
-            <span className="template__location-name template_location-name--experience">London, UK</span>
+            <span className="template__location-name template_location-name--experience"></span>
             <div className="template__dates template__dates--experience">
-              <span className="template__start-date template__start-date--experience">2017</span>
+              <span className="template__start-date template__start-date--experience"></span>
               <span className="dash"> - </span>
-              <span className="template__end-date template__end-date--experience">2019</span>
+              <span className="template__end-date template__end-date--experience"></span>
             </div>
           </div>
           <div className="template__experience-details">
-            <span className="template__position-title"><b>Software Engineer</b></span>
-            <span className="template__company-name">Facebook</span>
-            <span className="template__work-description">Lead the team that designed facebook's friend finder algorithm.</span>
+            <span className="template__position-title"><b></b></span>
+            <span className="template__company-name"></span>
+            <span className="template__work-description"></span>
           </div>
         </div>
       </div>
