@@ -21,6 +21,14 @@ $pc-white: #F9F9F9;
   border-radius: 8px;
 }
 
+@mixin btnContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
 body {
   background-color: $cool-gray;
 }
@@ -57,26 +65,52 @@ body {
     text-align: center;
   }
 
-  .add-btn-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  .btn-container--add {
+    @include btnContainer();
+    margin-top: -0.8em;
+    margin-bottom: 0.8em;
+  }
+
+  .btn-container--delete {
+    @include btnContainer();
   }
 
   .btn {
     background-color: $darker-gray;
     border: none; 
-    font-size: 1.1em;
     font-weight: 600;
     text-align: center;
-    width: 50%;
+    width: 35%;
     margin: auto;
     cursor: pointer;
-    padding: 0.3em 0;
+    padding: 0.2em 0;
   }
 
   .btn:hover {
     background-color: #9caaa9a1;
+  }
+
+  .btn--hidden {
+    display: none;
+  }
+
+  .section__add-education-btn {
+    margin-top: 0.5em;
+  }
+
+  .responsibility-container {
+    display: flex;
+    align-items: center;
+    justify-content: inherit;
+  }
+
+  .add-responsibility-btn {
+    font-weight: 900;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    width: 1em;
   }
 }
 
@@ -203,5 +237,16 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 0.4em;
+  }
+
+  .template__work-description--container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .template__work-description {
+    word-wrap: anywhere;
+    padding-right: 3em;
+    white-space: pre-wrap;
   }
 }
