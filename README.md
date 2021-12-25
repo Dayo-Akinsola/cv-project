@@ -1,3 +1,9 @@
+# CV Applicaton
+
+[Live Site Link](https://dayo-akinsola.github.io/cv-project/)
+
+A project based on 'The Odin Project' curriculum which allows users to create a cv using a template. It works by displaying a form and allowing users to type in their information which dynamically renders their info onto the cv template.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
