@@ -5,7 +5,10 @@ class EducationTemplate extends Component {
   render() {
     const { formState, formatDate } = this.props;
     const { uniname, degree, location, start, end } = formState;
-    const [ startDate, endDate ] = [start, end].map((date) => formatDate(date));
+    let [ startDate, endDate ] = [start, end].map((date) => formatDate(date));
+    if (endDate === undefined) {
+      endDate = 'Present';
+    }
     return (
       <div className="template__container template__container--education">
         <div className="template__content template__content--education">
