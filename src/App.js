@@ -366,7 +366,7 @@ class App extends Component {
             <button onClick={this.addExperienceForm} className="section__add-education-btn btn">Add</button>
           </div>
           <div className="form__control-btns">
-            <button onClick={this.printTemplate} type='button' className='submit-btn btn'>Submit</button>
+            <button onClick={this.printTemplate} type='button' className='submit-btn btn'>Save / Print</button>
             <button onClick={this.autoFillForms} className="example-btn btn">Load Example</button>
             <button onClick={this.resetForms} className="reset-btn btn">Reset</button>
           </div>
