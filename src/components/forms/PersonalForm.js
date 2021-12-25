@@ -1,25 +1,23 @@
 import React, { Component} from 'react';
-import SectionHeading from './SectionHeading';
 
 class PersonalForm extends Component {
-  constructor() {
-    super()
-  }
-
+  
   render() {
+
+    const { handleInputChange, formState } = this.props;
+    const { first, last, email, phone, address, title, profile } = formState;
     return (
       <div className='section section--personal'>
-        <SectionHeading headingTextContent='Personal' />
         <form className='form form--personal'>
           <div className='name-container'>
-            <input type='text' placeholder='First Name' className='form__input form__input--first-name' />
-            <input type='text' placeholder='Last Name' className='form__input form__input--last-name' />
+            <input name='first' type='text' onChange={handleInputChange} value={first} placeholder='First Name' className='form__input form__input--first-name' />
+            <input name='last' type='text' onChange={handleInputChange} value={last} placeholder='Last Name' className='form__input form__input--last-name' />
           </div>
-          <input type='email' placeholder='Email' className='form__input form__input--email' />
-          <input type='tel' placeholder='Phone Number' className='form__input form__input--phone-number' />
-          <input type='text' placeholder='Address' className='form__input form__input--address' />
-          <input type='text' placeholder='Title' className='form__input form__input--title' />
-          <textarea placeholder='Profile' rows='5' className='form__input form__input--profile' />
+          <input name='email' type='email' onChange={handleInputChange} value={email} placeholder='Email' className='form__input form__input--email' />
+          <input name='phone' type='tel' onChange={handleInputChange} value={phone} placeholder='Phone Number' className='form__input form__input--phone-number' />
+          <input name='address' type='text' onChange={handleInputChange} value={address} placeholder='Address' className='form__input form__input--address' />
+          <input name='title' type='text' onChange={handleInputChange} value={title} placeholder='Title' className='form__input form__input--title' />
+          <textarea name='profile' onChange={handleInputChange} value={profile} placeholder='Profile' rows='5' className='form__input form__input--profile' />
         </form>
       </div>
     )
