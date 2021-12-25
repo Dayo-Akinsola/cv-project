@@ -3,7 +3,7 @@ import React, { Component} from 'react';
 class ExperienceForm extends Component {
  
   render() {
-    const { form, tasks,  handleInputChange, handleTaskChange, deleteForm, deleteBtnClassName, addTaskEntry } = this.props;
+    const { form, tasks,  handleInputChange, handleTaskChange, deleteForm, deleteBtnClassName, addTaskEntry, deleteTaskEntry } = this.props;
     const { title, company, location, start, end } = form;
 
     return (
@@ -51,7 +51,9 @@ class ExperienceForm extends Component {
           />
           <div className="responsibilities-container">
             {tasks.map((task) => {
-               const button = task.addTaskBtn ? <button onClick={(event) => addTaskEntry(event, form.id)} className="add-responsibility-btn">&#43;</button>: <></>;
+               const button = task.addTaskBtn ? 
+               <button onClick={(event) => addTaskEntry(event, form.id)} className="add-responsibility-btn task-btn">&#43;</button> :
+               <button onClick={(event) => deleteTaskEntry(event, form.id, task.id)} className="delete-responsibility-btn task-btn">&#8722;</button>
                if (form.id === task.experienceFormId){
                 return(
                   <div key={task.id} className="responsibility-container">
